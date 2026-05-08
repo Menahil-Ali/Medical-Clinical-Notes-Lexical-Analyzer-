@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedLex | Clinical Note Lexical Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="icon">⚕️</span>
+                <h1>Med<span>Lex</span></h1>
+            </div>
+            <p class="subtitle">Medical Clinical Notes Lexical Analyzer (CT-367)</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Clinical Note Input</h3>
+                        <span class="badge">Raw Text</span>
+                    </div>
+                    <textarea id="noteInput" placeholder="Enter clinical notes here (e.g., Pt w/ SOB x3d, Rx: ASA 81mg qD)..."></textarea>
+                    <div class="controls">
+                        <button id="tokenizeBtn" class="btn-primary">Analyze Tokens</button>
+                        <button id="clearBtn" class="btn-secondary">Clear</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <div class="results-grid">
+                    <div class="card highlight-card">
+                        <div class="card-header">
+                            <h3>Syntax Highlighting</h3>
+                            <span class="badge">Live View</span>
+                        </div>
+                        <div id="highlightView" class="highlight-area"></div>
+                    </div>
+
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Token Stream</h3>
+                            <span class="badge">Lexemes</span>
+                        </div>
+                        <div class="table-wrapper">
+                            <table id="tokenTable">
+                               <thead>
+                                   <tr>
+                                       <th>Type</th>
+                                       <th>Value</th>
+                                       <th>Pos</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <!-- Tokens will be injected here -->
+                               </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card symbol-card">
+                        <div class="card-header">
+                            <h3>Symbol Table</h3>
+                            <span class="badge">Unique Entities</span>
+                        </div>
+                        <div class="symbol-grid" id="symbolGrid">
+                            <!-- Symbols will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Developed for Theory of Programming Languages (CT-367) &copy; 2026</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
