@@ -5,7 +5,7 @@ const TOKEN_SPECIFICATION = [
     ['VITALS', /\b(BP|HR|RR|SpO2|Temp|T)\b/],
     ['PATIENT_REF', /\b(Pt[s]?|patient|Hx|Dx|Sx|CC|Hx of|Dx of)\b/],
     ['SYMPTOM', /\b(SOB|CP|HA|N\/V|URI|UTI|DOE|CP|Abd pain|LOI|LOC)\b/],
-    ['DIAGNOSIS', /\b(HTN|DM[12]?|CAD|CHF|COPD|AFib|CKD|CVA|TIA|PNA|PE|NSTEMI|HFrEF)\b/],
+    ['DIAGNOSIS', /\b(HTN|DM[12]?|CAD|CHF|COPD|AFib|CKD|CVA|TIA|PNA|PE|NSTEMI|HFrEF|Asthma|GERD|COVID)\b/],
     ['DOSAGE', /\b\d+\s?(mg|ml|mcg|gtt|tab[s]?|units)\b/],
     ['FREQUENCY', /\b(qD|BID|TID|QID|qHS|PRN|q\d+h|q\d+hr[s]?)\b/],
     ['DURATION', /(x\d+[dhwk])/],

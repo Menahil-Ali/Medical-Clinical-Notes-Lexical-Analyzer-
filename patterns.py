@@ -14,7 +14,7 @@ TOKEN_SPECIFICATION = [
     ('SYMPTOM', r'\b(SOB|CP|HA|N/V|URI|UTI|DOE|CP|N/V|Abd pain|LOI|LOC)\b'),
     
     # [4] DIAGNOSES (e.g., HTN, DM)
-    ('DIAGNOSIS', r'\b(HTN|DM|CAD|CHF|COPD|AFib|CKD|CVA|TIA|PNA|PE)\b'),
+    ('DIAGNOSIS', r'\b(HTN|DM|CAD|CHF|COPD|AFib|CKD|CVA|TIA|PNA|PE|Asthma|GERD|COVID)\b'),
     
     # [5] DOSAGE & UNITS (e.g., 500mg, 2 tabs)
     # Using a slightly complex regex to capture number + unit together as one token
